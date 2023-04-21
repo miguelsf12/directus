@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+:root {
+    --roxo-escuro: #4800B3;
+    --roxo-claro: #7417FF;
+    --laranja: #FF6822;
+    --amarelo: #FFF918;
+    --branco: #FFFFFF;
+    --cinza: #C7C7C7;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--branco);
+    max-width: 100vw;
+    /* height: 100vh; */
+}
+
+/* HOME */
+
+.conteudo {
+    margin: auto;
+    width: 100%;
+    max-width: 360px;
+    /* overflow-x: hidden; */
+}
+
+.header-desktop-itens {
+    display: none;
+}
+
+.header-mobile {
+    width: 100%;
+    /*limitador*/
+
+    /* height: 61.5px; */
+    max-height: 75px;
+    background-color: var(--roxo-escuro);
+    border-radius: 0px 0px 30px 30px;
+}
+
+.header-itens-mb.container-mb {
+    display: flex;
+    align-items: center;
+}
+
+/* NAV */
+.header-itens-mb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* H1 DIRECTUS */
+.header-itens-item1 {
+    color: var(--branco);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 19.5px 0px 19.5px 25px;
+}
+
+
+/* SETA PARA ABIR MENU */
+.abrir-menu-mb {
+    display: flex;
+    position: absolute;
+    margin: 37px 25px 19.5px 0px;
+    width: 32px;
+    height: 2px;
+    top: 0px;
+    right: 0px;
+    z-index: 999;
+}
+
+.abrir-menu-mb::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    box-shadow: 0 -10.5px 0 #FFFFFF;
+    background-color: var(--branco);
+}
+
+.abrir-menu-mb::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    background-color: var(--branco);
+    transform: translateY(-20px);
+}
+
+
+.abrir-menu-mb.ativo::before {
+    box-shadow: 0 0 0 #FFFFFF;
+    background-color: var(--laranja);
+    transition: 0.4s;
+    transform: rotate(45deg);
+}
+
+.abrir-menu-mb.ativo::after {
+    box-shadow: 0 0 0 #FFFFFF;
+    background-color: var(--laranja);
+    transition: 0.4s;
+    transform: rotate(-45deg);
+}
+
+/* CAIXA QUANDO ABRE MENU*/
+.header-mobile-itens {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 15px; */
+    max-width: 100vw;
+    height: 100vh;
+    background-color: var(--roxo-escuro);
+    z-index: 1;
+    animation: menuDescer ease 0.4s;
+}
+
+@keyframes menuDescer {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ITENS DE QUANDO ABRE O MENU */
+.header-itens-item2,
+.header-itens-item3 {
+    margin-top: 15px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+    height: 100vh;
+}
+
+.home-content-frase {
+    /* position: relative; */
+    /* top: -100px; */
+    width: 302px;
+    height: 151px;
+}
+
+.home-content-frase img {
+    width: 100%;
+    height: 100%;
+}
+
+.home-content-image {
+    /* DIFERENÇA DE 50px Width p/ Height*/
+    width: 213px;
+    height: 153px;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    right: -77px;
+    top: 0px;
+}
+
+.home-content-image img {
+    height: 100%;
+    width: 100%;
+}
+
+/* ORGANIZAR TAMANHO LARGURA E ALTURA PARA RESPONSIVIDADE */
+
+.btnDuvidas {
+    width: 190px;
+    height: auto;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 117.7%;
+    text-align: center;
+    background-color: var(--roxo-claro);
+    border-radius: 50px;
+    color: var(--branco);
+    cursor: pointer;
+    text-transform: uppercase;
+
+    position: relative;
+    left: -50px;
+    top: 40px;
+}
+
+.btnScroll {
+    margin-top: 20px;
+    border: 3px solid var(--laranja);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* SEÇÃO SOBRE */
+
+.sobre-content {
+    max-height: 100vh;
+}
+
+.sobre {
+    width: 242px;
+    height: 106px;
+
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: justify;
+
+    color: var(--roxo-escuro);
+    background-color: var(--laranja);
+}
+
+@media screen and (max-width: 312px) {
+    /*NAO FICOU BOM*/
+
+    /* HEADER */
+    .header-mobile {
+        width: 109%;
+        /*limitador*/
+    }
+
+    /* MAIN */
+    .conteudo {
+        max-width: 312px;
+    }
+
+    /* SCROLL (DESCER) */
+    .btnScroll {
+        position: relative;
+        right: -17px;
+
+    }
+
+    /* QUANDO ABRE O MENU */
+    .header-mobile-itens {
+        width: 312px;
+        height: 100vh;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    /* IMAGEM DO HOME */
+    .home-content-image {
+        /* DIFERENÇA DE 50px Width p/ Height*/
+        width: 210px;
+        height: 150px;
+        margin: 0px 0px 0px 0px;
+        position: relative;
+        right: -73px;
+        top: 0px;
+    }
+
+    /* BOTAO SEÇÃO HOME */
+    .btnDuvidas {
+        width: 170px;
+        font-size: 1.45rem;
+        position: relative;
+        left: -57px;
+        top: 40px;
+    }
+}

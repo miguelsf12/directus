@@ -1,0 +1,12 @@
+* Nota 1
+
+• Mudar estilo do MENU, passar de seta para 3 barras, onde ao clicar aparece uma tela com as opções. (EX:
+https://www.youtube.com/watch?v=H91DhKPjhPk )
+
+• Responsividade*
+
+• Ao aumentar a tela (Width), aumentar o tamanho dos elementos e a área de exibição dos elementos (Área de exibição mobile inicial, 360px)
+
+• RESOLVER MENU BUGADO(RESOLVIDO ATE ENTAO)
+
+• USAR % NA RESPONSIVIDADE OU REM / EM
