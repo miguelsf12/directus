@@ -2,7 +2,6 @@ const btnAbrirMenu = document.querySelector('.abrir-menu-mb')
 const btnFecharMenu = document.querySelector('.fechar-menu-mb')
 const caixaMenu = document.querySelector('.header-mobile-itens')
 
-let show = true
 
 // SUMINDO ELEMENTOS AO ABRIR MENU
 const btnDuvidas = document.querySelector('.btnDuvidas')
