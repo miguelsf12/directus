@@ -5,7 +5,6 @@ const caixaMenu = document.querySelector('.header-mobile-itens')
 
 // SUMINDO ELEMENTOS AO ABRIR MENU
 const btnDuvidas = document.querySelector('.btnDuvidas')
-const btnScrool = document.querySelector('.btnScroll')
 const header = document.querySelector('.header-mobile')
 const main = document.querySelector('main')
 
@@ -14,18 +13,15 @@ btnAbrirMenu.addEventListener('click', () => {
         caixaMenu.style.display = 'none';
         document.body.style.overflow = "initial"
         btnDuvidas.style.display = 'block';
-        btnScrool.style.display = 'block';
 
-        
         header.style.display = 'block'
     } else {
         caixaMenu.style.display = 'flex';
         document.body.style.overflow = "hidden"
         btnDuvidas.style.display = 'none';
-        btnScrool.style.display = 'none';
 
-        
         header.style.display = 'none'
+        
     }
 })
 

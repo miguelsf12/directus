@@ -11,30 +11,34 @@
 
 <body>
     <!-- CABEÇALHO -->
-    <header class="header-desktop">
-        <nav class="header-desktop-itens">
+    <div class="header-desktop">
+        <header class="header-desk-container">
             <span class="header-itens-item1">DIRECTUS</span> <!-- Futuramente logo-->
-            <span class="desk-header-itens-item2">INÍCIO</span>
-            <span class="desk-header-itens-item3">SOBRE</span>
-            <span class="desk-header-itens-item4">DÚVIDAS</span>
-            <!-- POR QUE ABRIR MENU NO DESKTOP ??? -->
-            <box-icon class="abrir-menu-desktop" size="md" name='chevron-left' color='#ffffff'></box-icon>
-        </nav>
-    </header>
+            <nav class="header-desktop-itens">
+                <span class="desk-header-itens-item2">INÍCIO</span>
+                <span class="desk-header-itens-item3">SOBRE</span>
+                <span class="desk-header-itens-item4">DÚVIDAS</span>
+            </nav>
+        </header>
+    </div>
 
-    <header class="header-mobile">
-        <nav class="header-itens-mb container-mb">
-            <span class="header-itens-item1">DIRECTUS</span> <!-- Futuramente logo-->
-        </nav>
-    </header>
-
-    <!-- ABRIR MENU -->
-    <div class="abrir-menu-mb"></div>
+    <div class="hcontainer">
+        <div class="header_container">
+            <header class="header-mobile">
+                <nav class="header-itens-mb container-mb">
+                    <span class="header-itens-item1">DIRECTUS</span> <!-- Futuramente logo-->
+                </nav>
+            </header>
+            <!-- ABRIR MENU -->
+            <div class="menu_container">
+                <div class="abrir-menu-mb"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- MENU ABERTO -->
     <div class="header-mobile-itens">
         <!-- LINKAR SEÇÕES -->
-
         <a href="#">
             <div class="header-itens-item2">
                 <box-icon size="lg" name='home' color='#ffffff'></box-icon>
@@ -58,14 +62,14 @@
             </div>
 
             <div class="btnDuvidas">
-                Clique aqui para tirar suas dúvidas
+                Clique aqui para tirar suas dúvidas!
             </div>
 
             <div class="home-content-image">
                 <img src="images/home-image2.png" alt="menino-em-cima-de-livros">
             </div>
 
-            <box-icon class="btnScroll" size="lg" name='chevron-down' type='solid' color='#ff6822'></box-icon>
+            
 
         </section>
 
